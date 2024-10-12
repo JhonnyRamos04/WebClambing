@@ -1,0 +1,77 @@
+---
+import Mountain from './icons/MountainIcon.astro'
+import HeroLink from './ui/HeroLink.astro'
+---
+
+<header
+  class='py-2 px-2 md:px-10 flex items-center fixed backdrop-blur-sm top-0 w-full justify-between md:justify-around z-40 text-gray-800'
+>
+  <div>
+    <span
+      class='filter drop-shadow-md font-black text-3xl flex justify-center items-center'
+    >
+      TheClimb <Mountain />
+    </span>
+  </div>
+  <nav>
+    <ul
+      class='hidden md:flex text-sm max-sm:text-xs [&>li>a]:font-medium [&>li>a]:mx-1 [&>li>a]:px-2 [&>li>a]:py-4 [&>li>a]:inline-block'
+    >
+      <li>
+        <a class='hover:underline' href='#'>Inicio</a>
+      </li>
+      <li>
+        <a class='hover:underline' href='#'>Sobre Nosotros</a>
+      </li>
+      <li>
+        <a class='hover:underline' href='#'>Historia</a>
+      </li>
+    </ul>
+  </nav>
+  <div class='flex justify-end items-center'>
+    <HeroLink>Inscribite Ya</HeroLink>
+    <div class='md:hidden' id='btn-menu'>
+      <button class='p-2'></button>
+    </div>
+  </div>
+  <div
+    class='fixed w-screen h-screen top-0 -right-[2000px] transition-all duration-300 bg-white/90 overflow-y-hidden'
+    id='menu-pop'
+  >
+    <button
+      id='btn-close'
+      class='p-2 mx-2 text-gray-800 w-16 h-16 absolute right-0'></button>
+    <ul
+      class='text-gray-800 mt-8 font-bold [&>li]:px-4 [&>li]:py-2 [&>li]:w-full flex h-full py-10 justify-start items-center flex-col gap-y-4 text-2xl'
+    >
+      <li class='hover:text-gray-600 transition duration-200'>
+        <a href=''></a>Home
+      </li>
+      <li class='hover:text-gray-600 transition duration-200'>
+        <a href=''></a>About
+      </li>
+      <li class='hover:text-gray-600 transition duration-200'>
+        <a href=''></a>Blog
+      </li>
+      <li class='hover:text-gray-600 transition duration-200'>
+        <a href='
+        '> </a>Contact Us
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const button = document.querySelector('#btn-menu')
+    const buttonClose = document.querySelector('#btn-close')
+    const menu = document.querySelector('#menu-pop')
+
+    button.addEventListener('click', () => {
+      menu.classList.toggle('-right-[2000px]')
+      menu.classList.toggle('right-0')
+    })
+    buttonClose.addEventListener('click', () => {
+      menu.classList.toggle('right-0')
+      menu.classList.toggle('-right-[2000px]')
+    })
+  </script>
+</header>

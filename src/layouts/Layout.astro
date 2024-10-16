@@ -1,6 +1,7 @@
 ---
 // Supports weights 100-900
 import '@fontsource-variable/noto-sans'
+import 'mingcute_icon/font/Mingcute.css'
 interface Props {
   title: string
 }
@@ -48,5 +49,10 @@ const { title } = Astro.props
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+
+  [class^='mgc_']::before,
+  [class*=' mgc_']::before {
+    color: inherit !important;
   }
 </style>

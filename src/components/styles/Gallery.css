@@ -18,3 +18,10 @@
     opacity: 1;
     filter: contrast(120%);
 }
+
+@media (max-width:768px) {
+    .gallery-container {
+        width: 300px;
+        height: 300px;
+    }
+}

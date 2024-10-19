@@ -106,4 +106,18 @@ const { number, title, icon } = Astro.props
     border-color: #0a3cff;
     scale: 1.05;
   }
+
+  @media (max-width: 768px) {
+    .card {
+      width: auto;
+    }
+    .content .heading {
+      font-size: 24px;
+    }
+
+    .content .para {
+      font-size: 16px;
+      overflow: hidden;
+    }
+  }
 </style>

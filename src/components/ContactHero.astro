@@ -2,12 +2,16 @@
 import Mountain from './icons/MountainIcon.astro'
 ---
 
-<section class='cards bg-gray-100 h-[600px] flex justify-center items-center'>
+<section
+  class='cards bg-gray-100 h-[500px] md:p-0 md:h-[600px] flex justify-center items-center'
+>
   <div class='card'>
     <div class='flex justify-center items-center flex-col h-full'>
       <div class='mgc_mountain_2_fill text-8xl'></div>
-      <p class='text-gray-900 text-4xl font-extrabold'>¡Inscríbete AHORA!</p>
-      <p class='text-gray-500 text-lg text-center'>
+      <p class='text-gray-900 text-2xl md:text-4xl font-extrabold'>
+        ¡Inscríbete AHORA!
+      </p>
+      <p class='text-gray-500 text-base md:text-lg text-center'>
         Comienza a obtener todos los beneficios de la escalada deportiva.
       </p>
     </div>
@@ -61,5 +65,14 @@ import Mountain from './icons/MountainIcon.astro'
   .card:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 300px;
+    }
+    .card-button {
+      font-size: 1rem;
+    }
   }
 </style>
